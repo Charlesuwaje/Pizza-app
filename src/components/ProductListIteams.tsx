@@ -15,6 +15,7 @@ const ProductListItems = ({ product }: ProductListItemsProps) => {
       <Image
         source={{ uri: product.image || defultImage }}
         style={styles.image}
+        resizeMode="contain"
       />
       <Text style={styles.main}>{product.name}</Text>
       <Text style={styles.price}>${product.price}</Text>
@@ -28,7 +29,10 @@ const styles = StyleSheet.create({
     alignItems: "center",
     backgroundColor: "white",
     padding: 10,
+    flex:1,
     borderRadius: 20,
+    margin:5,
+    maxWidth:'50%'
   },
   main: {
     fontSize: 30,
